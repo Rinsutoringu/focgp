@@ -47,3 +47,16 @@ int main(int argc, char const *argv[])
     return 0;
 }
 ```
+
+
+## void search(int time, int volume)
+- 接受两个参数
+  - 第一个参数为系统当前时间
+  - 第二个参数为用户所需的最大人数
+- 调用示例
+```
+int main(int argc, char const *argv[])
+{
+    search(time.hour, max);
+}
+```
