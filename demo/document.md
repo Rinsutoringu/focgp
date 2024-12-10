@@ -27,3 +27,23 @@ int main() {
 }
 
 ```
+
+
+## void cutStr(char *str, char **cutout)
+- 接受两个参数
+    - 第一个参数为分割前的原始字符串
+    - 第二个参数为一个字符串数组，用于存储分割后的字符串
+- 调用示例
+```
+int main(int argc, char const *argv[])
+{
+    char str[] = "wpr 121";
+    // 创建了一个内容为"wpr 121"的数组
+    char *cutout[2];
+    // 创建了一个大小为2的字符串型数组
+    cutStr(str, cutout);
+    printf("cutout[0] = %s\n", cutout[0]);
+    printf("cutout[1] = %s\n", cutout[1]);
+    return 0;
+}
+```
