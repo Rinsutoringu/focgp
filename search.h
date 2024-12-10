@@ -1,0 +1,1 @@
+void search(int time, int volume);
