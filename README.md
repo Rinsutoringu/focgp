@@ -1,3 +1,7 @@
+[中文版文档](https://github.com/Rinsutoringu/focgp/blob/main/%E8%AF%BE%E7%A8%8B%E9%A1%B9%E7%9B%AE%20-%20%E6%95%99%E5%AE%A4%E9%A2%84%E8%AE%A2%E7%B3%BB%E7%BB%9F.pdf)
+
+
+
 # Course Project - Classroom Booking
 
 *For Foundation of C Programming - 2024 Fall*
@@ -98,7 +102,7 @@ In this system, two files have been provided: account.txt and classroom_info.txt
 		</td>
 	</tr>
 </table>
-	
+
 Your program should produce a text file for each classroom, recording its current booking status that will be used to decide if it can be booked. Previous booking information should be removed, i.e., it stores only the booking information for today, tomorrow and the day after tomorrow. You can decide the format of these files.
 
 
