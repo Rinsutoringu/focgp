@@ -60,7 +60,7 @@ int main(int argc, char const *argv[])
     search(time.hour, max);
 }
 ``
-
+##这是官同学搞的前两个步骤的函数
 int userlogin (int n)
  -不需要任何参数进去
 -只需要一个命令去执行即可
