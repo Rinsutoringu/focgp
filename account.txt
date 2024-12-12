@@ -1,4 +1,0 @@
-alice 1111
-tony 2222
-jane 3333
-a 1
