@@ -57,9 +57,9 @@ int main(int argc, char const *argv[])
 ```
 int main(int argc, char const *argv[])
 {
-    search(time.hour, max);
+    search(time.hour, max);//返回当前可用教室，一行一个
 }
-``
+```
 ##这是官同学搞的前两个步骤的函数
 int userlogin (int n)
  -不需要任何参数进去
