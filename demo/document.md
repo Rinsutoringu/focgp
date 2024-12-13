@@ -1,6 +1,9 @@
 # 项目文档
 
-## char** getLines(const char *filename, int *count)
+## getLines
+
+函数声明：`char** getLines(const char *filename, int *count)`
+
 - 接受两个参数
     - 第一个参数为需要打开的文件名称（及相对路径）
     - 第二个参数为程序获取到的文件行数（实际上为文件行数-1，因为统计的是换行符数量。）
@@ -28,8 +31,10 @@ int main() {
 
 ```
 
+## cutStr
 
-## void cutStr(char *str, char **cutout)
+函数声明`void cutStr(char *str, char **cutout)`
+
 - 接受两个参数
     - 第一个参数为分割前的原始字符串
     - 第二个参数为一个字符串数组，用于存储分割后的字符串
@@ -48,8 +53,10 @@ int main(int argc, char const *argv[])
 }
 ```
 
+## search
 
-## void search(int time, int volume)
+函数声明`void search(int time, int volume)`
+
 - 接受两个参数
   - 第一个参数为系统当前时间
   - 第二个参数为用户所需的最大人数
@@ -60,20 +67,29 @@ int main(int argc, char const *argv[])
     search(time.hour, max);//返回当前可用教室，一行一个
 }
 ```
+
+
+## userlogin
+
+函数声明`int userlogin (int n)`
+
 ##这是官同学搞的前两个步骤的函数
 int userlogin (int n)
- -不需要任何参数进去
--只需要一个命令去执行即可
--按照我自己的测试就是：
-int a;
-a=userlogin(1);
---（1）用来执行用户登录的指令
--之后会自动跳出登录界面
-——登录成功返回值a=1；
-——登录失败返回值a=0；
-通过a的值来判断是非登录成功
 
-int TimeAndOrder(int n)
+- 不需要任何参数进去
+  - 只需要一个命令去执行即可
+  -按照我自己的测试就是：
+  int a;
+  a=userlogin(1);
+  --（1）用来执行用户登录的指令
+  -之后会自动跳出登录界面
+  ——登录成功返回值a=1；
+  ——登录失败返回值a=0；
+  通过a的值来判断是非登录成功
+
+## TimeAndOrder
+
+函数声明`int TimeAndOrder(int n)`
 -同样的不需要任何参数进去
 同上：
 int b;
