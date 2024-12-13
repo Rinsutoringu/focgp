@@ -4,7 +4,7 @@ struct Class{
 	int max;
 	};//此处创建一个名为class的结构体，其中name为教室名称，max表示可容纳的最大人数
 struct Class cl[100];//暂定不超过100个教室，可能需要用动态内存分配进行后续修改
-void search(int time, int volume){//该函数表示查询可用教室
+void search_room(int time, int volume){//该函数表示查询可用教室
 	FILE *fp;
 	int i=0;//一个暂时的变量，用于遍历每个教室
 	int flag=0;//一个暂时的变量，用于标记符合需求的教室
