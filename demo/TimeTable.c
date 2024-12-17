@@ -1,9 +1,12 @@
 ﻿#include <stdio.h>
 #include <time.h>
-void TimeTable(int n){
+int TimeTable(int n){
 	int chioce;
-	int i=1;
-	if(n!=1){
+	int Rchioce;
+	if(n<1||n>4){
+		return 0;
+	}
+	if(n!=1&&n!=4){
 		printf("1. 9:00 am - 9:50 am\n");
 		printf("2. 10:00 am - 10:50 am\n");
 		printf("3. 11:00 am - 11:50 am\n");
@@ -13,21 +16,24 @@ void TimeTable(int n){
 		printf("7. 3:00 pm - 3:50 pm\n");
 		printf("8. 4:00 pm - 4:50 pm\n");
 		printf("9. Exit\n");
+		int i=9;
+		Rchioce=i;
 }
 else{
+	int i=1;
 	struct tm *tblock;
 	time_t current_time;
 	time(&current_time);
 	tblock = localtime(&current_time);
 		int hour=tblock->tm_hour;
 		if(hour>12){
-			int a=hour-12;
-			int b=a;
-			for(;i<=a;i++){
-				printf("%d .%d:00 pm - %d:50 pm\n",i,b,b);
-				b++;
+			int a=hour-11;
+			int b=16-hour;
+			for(;i<=b;i++){
+				printf("%d .%d:00 pm - %d:50 pm\n",i,a,a);
+				a++;
 			}
-			printf("%d .Exit\n",a+1);
+			printf("%d .Exit\n",i);
 		}
 		if(hour<9){
 		printf("1. 9:00 am - 9:50 am\n");
@@ -41,8 +47,8 @@ else{
 		printf("9. Exit\n");
 		}
         if(hour>=9&&hour<=12){
-          int a=13-hour;
-			int b=hour;
+          int a=12-hour;
+			int b=hour+1;
 			for(;i<=a;i++){
 				printf("%d. %d:00 am - %d:50 am\n",i,b,b);
 				b++;
@@ -53,24 +59,26 @@ else{
 		printf("%d. 4:00 pm - 4:50 pm\n",i++);
 		printf("%d. Exit\n",i);
 	}
+		Rchioce=i;
 	}
 		while(1){
+		printf("=================\n");
 		printf("Please make a choice :");
 		scanf("%d",&chioce);
-		if(chioce==9||chioce==i){
-			printf("You have successfully exited!\n");
-				return;
+		if(chioce==Rchioce){
+			printf("Successfully exited!\n");
+				return chioce;
 		}
-		if(chioce>=1&&chioce<i){
-			printf("You have successfully!\n");
-			printf("Input the size of classroom: \n");
-				return;
+		if(chioce>=1&&chioce<Rchioce){
+			printf("You have successfully order!\n");
+			printf("=================\n");
+				return  chioce;
 		}
 			else{
 				printf("Invalid operation! Please try again:\n");
 				}
 		}
-	return ;
+	return chioce;
 }
 
 
