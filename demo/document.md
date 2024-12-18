@@ -60,19 +60,18 @@ int main(int argc, char const *argv[])
 
 ## search
 
-函数声明`void search(int time, int volume)`
+函数声明`void search(int volume)`
 
 - 【参数】
-  - 接受两个参数
-    - 第一个参数为系统当前时间
-    - 第二个参数为用户所需的最大人数
+  - 接受一个参数
+    - 第一个参数为用户所需的最大人数
 - 【返回值】
   - 返回当前的可用教室
 - 【调用示例】
 ```
 int main(int argc, char const *argv[])
 {
-    search(time.hour, max);//返回当前可用教室，一行一个
+    search(max);//返回当前可用教室
 }
 ```
 
