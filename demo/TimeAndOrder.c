@@ -16,23 +16,11 @@ int TimeAndOrder(int n) {
 	time(&current_time);
 	tblock = localtime(&current_time);
 	int hour=tblock->tm_hour;
-	if(hour>=16){
-    printf("Sorry! The scheduled time for today has ended!\n");
-	printf("Tomorrow's available booking time will be displayed.\n");
-    printf("=================\n");	
-	today.year=tblock->tm_year+1900;
-	today.month=tblock->tm_mon+1;
-	today.day=tblock->tm_mday+1;
-	next=findNextDay(today);
-	next1=afterTomorrow(today);
-	}
-	else{
 	today.year=tblock->tm_year+1900;
 	today.month=tblock->tm_mon+1;
 	today.day=tblock->tm_mday;
 	next=findNextDay(today);
 	next1=afterTomorrow(today);
-	}
 	printf("1. %d.%d.%d\n",today.year, today.month, today.day);
 	printf("2. %d.%d.%d\n",next.year,next.month,next.day);
 	printf("3. %d.%d.%d\n",next1.year,next1.month,next1.day);

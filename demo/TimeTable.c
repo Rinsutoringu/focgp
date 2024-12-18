@@ -59,6 +59,9 @@ else{
 		printf("%d. 4:00 pm - 4:50 pm\n",i++);
 		printf("%d. Exit\n",i);
 	}
+		if(hour>=16){
+			printf("%d. Exit\n",i);
+		}
 		Rchioce=i;
 	}
 		while(1){
