@@ -27,27 +27,31 @@ int TimeAndOrder(int n) {
 	printf("4. Exit\n");
 	printf("=================\n");
 	while(1){
-		printf("运行预定\n");
 	int choose;
 	printf("Please select the date you want to book(Number): ");
 	scanf("%d",&choose);
-		if(hour>=16){
-           printf("OK!Please reserve a room :\n");
-			return 2;
-		}
-		else{
+		char file_name[100];
 	switch(choose){
 			case(1):
 				printf("=================\n");
 			printf("OK!Please reserve a room :\n");
+			sprintf(file_name, "%d.%d.%d.txt",today.year, today.month, today.day);
+			FILE *fp=fopen(file_name,"w");
+			fclose(fp);
 			return 1;
 			break;
 		    case(2):
 				printf("=================\n");
 			printf("OK!Please reserve a room :\n");
+			sprintf(file_name, "%d.%d.%d.txt",next.year,next.month,next.day);
+			FILE *fp2=fopen(file_name,"w");
+			fclose(fp2);
 			return 2;
 			break;
 		    case(3):
+			sprintf(file_name, "%d.%d.%d.txt",next1.year,next1.month,next1.day);
+			FILE *fp3=fopen(file_name,"w");
+			fclose(fp3);       
 				printf("=================\n");
 			printf("OK!Please reserve a room :\n");
 			return 3;
@@ -60,7 +64,6 @@ int TimeAndOrder(int n) {
 		    default:
 				printf("=================\n");
 			printf("Invalid operation! Please try again!\n");
-	}
 	}
 	}
 }
