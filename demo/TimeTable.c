@@ -1,10 +1,10 @@
 ﻿#include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 int TimeTable(int n){
-	int chioce;
 	int Rchioce;
-	if(n<1||n>4){
-		return 0;
+	if(n<1||n>=4){
+		exit(0);
 	}
 	if(n!=1&&n!=4){
 		printf("1. 9:00 am - 9:50 am\n");
@@ -62,12 +62,13 @@ else{
 		Rchioce=i;
 	}
 		while(1){
+			int chioce;
 		printf("=================\n");
 		printf("Please make a choice :");
 		scanf("%d",&chioce);
 		if(chioce==Rchioce){
 			printf("Successfully exited!\n");
-				return chioce;
+			exit(0);
 		}
 		if(chioce>=1&&chioce<Rchioce){
 			printf("You have successfully order!\n");
@@ -78,7 +79,6 @@ else{
 				printf("Invalid operation! Please try again:\n");
 				}
 		}
-	return chioce;
 }
 
 

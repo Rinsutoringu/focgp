@@ -1,5 +1,6 @@
 ﻿#include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 struct date{
 	int month;
 	int day;
@@ -38,6 +39,7 @@ int TimeAndOrder(int n) {
 	printf("4. Exit\n");
 	printf("=================\n");
 	while(1){
+		printf("运行预定\n");
 	int choose;
 	printf("Please select the date you want to book(Number): ");
 	scanf("%d",&choose);
@@ -50,7 +52,6 @@ int TimeAndOrder(int n) {
 			case(1):
 				printf("=================\n");
 			printf("OK!Please reserve a room :\n");
-			a=TimeTable(1);
 			return 1;
 			break;
 		    case(2):
@@ -66,7 +67,7 @@ int TimeAndOrder(int n) {
 			case(4):
 				printf("=================\n");
 			printf("Successfully exited!\n");
-			return 4;
+			exit(0);
 			break;
 		    default:
 				printf("=================\n");

@@ -1,6 +1,6 @@
 ﻿#include <stdio.h>
 #include <string.h>
-#include "TwoF.h"
+#include <stdlib.h>
 int userlogin (int n) {
 	char account[255];
 	char passwords[255];
@@ -27,12 +27,10 @@ int userlogin (int n) {
 		if(strcmp(account,stuAccount[k])==0&&strcmp(passwords,stuPass[k])==0){
 			printf("Thanks,you have successfully logged in!\n");
 				printf("=================\n");
-				int b;
-				b=TimeAndOrder(1);
-                return -1;	
+            return 1;		
            }
 		}
-		ErrorTimes++;
+		ErrorTimes++; 
 		int LeftTimes=3-ErrorTimes;
 		if(LeftTimes>0){
 		printf("Abnormal account or password, try again!You still have %d chance left.\n",LeftTimes);
@@ -40,5 +38,5 @@ int userlogin (int n) {
 		}
 		}
 		printf("You have failed three times!\n");
-		return -1;
+		exit(0);
 }
