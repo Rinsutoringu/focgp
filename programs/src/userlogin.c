@@ -17,7 +17,7 @@
 */
 int userlogin(char filename[])
 {
-
+    char a;
     char* arr[10];
     int i = 0;
     char* line = NULL;
@@ -87,10 +87,14 @@ int userlogin(char filename[])
         memset(input_username, 0, sizeof(input_username));
         memset(input_password, 0, sizeof(input_password));
         printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        printf("=============  User Login  =============\n");
         printf("please input your username\n");
+        printf("========================================\n");
         scanf("%s", input_username);
         printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        printf("=============  User Login  =============\n");
         printf("please input your password\n");
+        printf("========================================\n");
         scanf("%s", input_password);
 
         for (int n = 0; n < i; n++)
@@ -110,8 +114,14 @@ int userlogin(char filename[])
             return 1;
         }
         printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-        printf("your password or username is wrong. But you still have %d choice.\n", 3-Opportunity);
-
+        printf("===========    Login Fail    ===========\n");
+        printf("\n\nyour password or username is wrong. But you still have %d choice.\n\n\n", 3-Opportunity);
+        printf("========================================\n");
+        printf("\n\n\n\nClick to continue...\n");
+        scanf("%c",&a);
+        scanf("%c",&a);
+        scanf("%c",&a);
+        
     }
     
 

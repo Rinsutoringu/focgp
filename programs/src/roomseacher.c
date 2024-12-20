@@ -24,7 +24,10 @@ char *roomseacher(int room_number, struct destine_time *userorder, struct room_i
     int suitable[1000] = {0};
     int index = 0;
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+    printf("============   Select size  ============\n");
+    
     printf("please input room size\n");
+    printf("========================================\n");
     scanf("%d", &user_input);
     // 先判断教室大小是否符合要求
     struct room_time_t *findstuct = NULL;

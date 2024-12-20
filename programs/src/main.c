@@ -37,10 +37,14 @@ int main(int argc, char const *argv[])
     int login_state = userlogin(account_file);
     if (login_state == 1)
     {
-        printf("your password or username is wrong. login fail!");
+        printf("=============  Login Fail  =============\n");
+        printf("\n\nyour password or username is wrong. login fail!\n\n\n");
+        printf("========================================\n");
         return 0;
     }
-    printf("login success!\n");
+    printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n============  Login success  ===========\n");
+    printf("\n\nlogin success!\n\n\n");
+    printf("========================================\n");
     // 函数userdestine的返回值，返回2代表用户选择退出
     // 返回其他非0值代表用户登录出错，返回0代表成功登录
 
@@ -50,7 +54,9 @@ int main(int argc, char const *argv[])
     int state = userdestine(&userorder);
     if (state == 2)
     {
-        printf("user exit...\n");
+        printf("\n\n\n\n\n\n\n\n\n\n\n\n==============  Good bye   =============\n");
+        printf("         see you next time!\n");
+        printf("========================================\n");
         return 0;
     }
     if (state != 0)
@@ -69,7 +75,7 @@ int main(int argc, char const *argv[])
     int room_number = txtcreater(Classroom_info, &userorder);
     if (room_number == -1)
     {
-        printf("程序根目录未发现教室配置文件！请检查后重试\n");
+        printf("classroom.txt not found!\n");
         return 0;
     }
     // printf("有%d份教室配置文件\n", room_number);
@@ -87,8 +93,12 @@ int main(int argc, char const *argv[])
     if (booked_room == NULL)
     {
         printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-        printf("Sorry, The room type you require is already available.\n");
+        printf("===========   Room not found  ==========\n");
+        
+        printf("\nSorry, The room type you require is already available.\n\n");
+        printf("========================================\n");
         printf("Continue (y/n)?\n");
+        
         char a;
         while (1)
         {
@@ -99,7 +109,10 @@ int main(int argc, char const *argv[])
             }
             else if (a == 'n')
             {
-                printf("see you next time!\n");
+                
+                printf("\n\n\n\n\n\n\n\n\n\n\n\n==============  Good bye   =============\n");
+                printf("         see you next time!\n");
+                printf("========================================\n");
                 return 0;
             }
             else
@@ -109,9 +122,10 @@ int main(int argc, char const *argv[])
         }
     }
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    printf("Your room number: %s\nYour order time: %d O'Clock start. (This reservation lasts 50 minutes, please plan your time in advance)\nYour order date: %s\n\n", booked_room, userorder.time, userorder.date);
-
+    printf("========   Room order success!  ========\n");
+    printf("\n\nYour room number: %s\nYour order time: %d O'Clock start. (This reservation lasts 50 minutes, please plan your time in advance)\nYour order date: %s\n\n\n", booked_room, userorder.time, userorder.date);
     printf("Book another room? (y/n)\n");
+    printf("========================================\n");
     char a;
     while (1)
     {
@@ -124,7 +138,9 @@ int main(int argc, char const *argv[])
         else if (a == 'n')
         {
             printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-            printf("see you next time!\n");
+            printf("\n\n\n\n\n\n\n\n\n\n\n\n==============  Good bye   =============\n");
+            printf("         see you next time!\n");
+            printf("========================================\n");
             return 0;
         }
         else

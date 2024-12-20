@@ -54,8 +54,10 @@ int userdestine(struct destine_time *ordertime)
         strcpy(ordertime->acquired_date, acquired_date);
 
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+    printf("==========  Order your date  ===========\n");
     printf("Which day you want order?\n");
     printf("1. %s\n2. %s\n3. %s\n4. exit\n", today_date, tomorrow_date, acquired_date);
+    printf("========================================\n");
 
     // 初始化用户日期选项
     int date_select;
@@ -65,8 +67,7 @@ int userdestine(struct destine_time *ordertime)
     int select_time = 0;
 
     scanf("%d", &date_select);
-    printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    printf("Which time you want order?\n");
+
     if (date_select == 4)
     {
         // 用户选择退出
@@ -104,7 +105,9 @@ int userdestine(struct destine_time *ordertime)
         {
             hour = 9;
         }
-
+        printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        printf("==========  Order your time  ===========\n");
+        printf("Which time you want order?\n");
         for (int i = hour; i < 17; i++)
         {
             number++;
@@ -133,11 +136,24 @@ int userdestine(struct destine_time *ordertime)
         {
             printf("%d. exit\n", 10);
         }
+        printf("========================================\n");
         
-        
-        
+
         scanf("%d", &select_time);
-        if (select_time == number)
+
+        if (hour == 9)
+        {
+            if (select_time == 8)
+            {
+                select_time+=8;
+                strcpy(ordertime->date, today_date);
+                ordertime->time = select_time;
+                break;
+            }
+            
+        }
+
+        if (select_time == number || select_time == 9)
         {
             printf("user exit.\n");
             // 用户选择退出
@@ -168,7 +184,9 @@ int userdestine(struct destine_time *ordertime)
 
     case 2:
         // printf("you choose tomorrow!\n");
-
+        printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        printf("==========  Order your time  ===========\n");
+        printf("Which time you want order?\n");
         for (int i = 9; i < 17; i++)
         {
             number++;
@@ -188,7 +206,7 @@ int userdestine(struct destine_time *ordertime)
             }
         }
         printf("9. exit\n");
-
+        printf("========================================\n");
         // 菜单打印完成，下方开始接收用户输入
         scanf("%d", &select_time);
         // 当用户选择9时将退出
@@ -216,7 +234,9 @@ int userdestine(struct destine_time *ordertime)
     case 3:
         // printf("you choose acquired!\n");
 
-
+        printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        printf("==========  Order your time  ===========\n");
+        printf("Which time you want order?\n");
 
         for (int i = 9; i < 17; i++)
         {
@@ -237,7 +257,7 @@ int userdestine(struct destine_time *ordertime)
             }
         }
         printf("9. exit\n");
-
+        printf("========================================\n");
         // 菜单打印完成，下方开始接收用户输入
         scanf("%d", &select_time);
         // 当用户选择9时将退出
