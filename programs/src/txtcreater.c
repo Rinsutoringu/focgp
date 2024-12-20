@@ -6,6 +6,8 @@
 #include <unistd.h>
 #include "../inc/define_struct.h"
 
+#include "../inc/cross_platform_dirent.h"
+
 /*
 ##############################################
 

@@ -1,5 +1,11 @@
 {
     "files.associations": {
-        "string.h": "c"
+        "string.h": "c",
+        "txtreader.h": "c",
+        "txtupdater.h": "c",
+        "define_struct.h": "c",
+        "cross_platform_dirent.h": "c",
+        "userlogin.h": "c",
+        "userdestine.h": "c"
     }
 }

@@ -2,9 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include <direct.h>
-#include <dirent.h>
-#include <unistd.h>
 #include "../inc/userlogin.h"
 #include "../inc/userdestine.h"
 #include "../inc/define_struct.h"
@@ -12,6 +9,10 @@
 #include "../inc/txtreader.h"
 #include "../inc/roomseacher.h"
 #include "../inc/txtupdater.h"
+
+#include "../inc/cross_platform_dirent.h"
+
+
 /*
 ##############################################
 
@@ -44,7 +45,7 @@ int main(int argc, char const *argv[])
     // 返回其他非0值代表用户登录出错，返回0代表成功登录
 
     // 第二步所在位置
-    label: signed;
+    label: 1;
 
     int state = userdestine(&userorder);
     if (state == 2)

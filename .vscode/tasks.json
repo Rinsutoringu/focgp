@@ -7,12 +7,20 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                "${workspaceFolder}\\programs\\src\\main.c",
+                "${workspaceFolder}\\programs\\src\\userlogin.c",
+                "${workspaceFolder}\\programs\\src\\userdestine.c",
+                "${workspaceFolder}\\programs\\src\\txtcreater.c",
+                "${workspaceFolder}\\programs\\src\\txtreader.c",
+                "${workspaceFolder}\\programs\\src\\roomseacher.c", 
+                "${workspaceFolder}\\programs\\src\\txtupdater.c", 
+                "${workspaceFolder}\\programs\\src\\cross_platform_dirent.c", 
+                "-I", "${workspaceFolder}/inc",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${workspaceFolder}/bin/main.exe"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${workspaceFolder}"
             },
             "problemMatcher": [
                 "$gcc"

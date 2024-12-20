@@ -3,9 +3,10 @@
 #include <string.h>
 #include <time.h>
 #include <direct.h>
-#include <dirent.h>
 #include <unistd.h>
 #include "../inc/define_struct.h"
+
+#include "../inc/cross_platform_dirent.h"
 
 /*
 ##############################################
