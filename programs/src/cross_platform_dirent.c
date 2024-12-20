@@ -1,5 +1,5 @@
 // cross_platform_dirent.c
-#include "cross_platform_dirent.h"
+#include "../inc/cross_platform_dirent.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
