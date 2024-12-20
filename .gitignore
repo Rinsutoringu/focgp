@@ -13,4 +13,4 @@ temp/
 .vscode/
 *.exe
 
-./program/src/config/
+program/src/config/
